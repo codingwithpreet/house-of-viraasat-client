@@ -1,24 +1,151 @@
-# Logs
-logs
+# ==============================================================================
+# HOUSE OF VIRAASAT - FRONTEND CLIENT GITIGNORE
+# ==============================================================================
+# This configuration targets the customer-facing React, Vite, and TypeScript client.
+# It prevents accidental commits of secrets, build artifacts, local config,
+# package caches, and system-specific files.
+
+# ------------------------------------------------------------------------------
+# Dependencies & Package Managers
+# ------------------------------------------------------------------------------
+node_modules/
+/jspm_packages/
+.pnpm-store/
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# ------------------------------------------------------------------------------
+# Build & Compilation Outputs
+# ------------------------------------------------------------------------------
+dist/
+dist-ssr/
+build/
+out/
+.out/
+.next/
+bin/
+obj/
+/coverage/
+/.nyc_output/
+.parcel-cache/
+.cache/
+.eslintcache/
+.stylelintcache/
+.tsbuildinfo
+vite.config.ts.timestamp-*
+
+# ------------------------------------------------------------------------------
+# Environment Variables & Secrets (CRITICAL SECURITY)
+# ------------------------------------------------------------------------------
+# Ignore all local environments that may contain live API keys or credentials
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+
+# Explicitly ensure that any private keys, certificates, or credentials are ignored
+*.pem
+*.key
+*.pub
+*.pfx
+*.p12
+*.asc
+cert.pem
+key.pem
+secrets.json
+
+# ------------------------------------------------------------------------------
+# Logs & Runtime Diagnostics
+# ------------------------------------------------------------------------------
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+pids
+*.pid
+*.seed
+*.pid.lock
 
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
+# ------------------------------------------------------------------------------
+# IDEs, Editors & Developer Tooling
+# ------------------------------------------------------------------------------
+# VS Code
 .vscode/*
 !.vscode/extensions.json
-.idea
-.DS_Store
+!.vscode/launch.json
+!.vscode/settings.json
+*.code-workspace
+
+# JetBrains (WebStorm, IntelliJ, etc.)
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Sublime Text / TextMate
+*.sublime-project
+*.sublime-workspace
+.memento
+.tmtags
+
+# Vim / Emacs
+*~
+*.swp
+*.swo
+*.swn
+*.swm
+.diff
+.patch
+
+# Visual Studio / Windows tools
 *.suo
+*.user
+*.userosscache
+*.sln.docstates
 *.ntvs*
 *.njsproj
 *.sln
-*.sw?
+
+# ------------------------------------------------------------------------------
+# Operating System Artifacts
+# ------------------------------------------------------------------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+.directory
+*~
+
+# ------------------------------------------------------------------------------
+# Database & Temp Files (Fallback safeguards)
+# ------------------------------------------------------------------------------
+*.db
+*.sqlite
+*.sqlite3
+*.sqlite-journal
+*.tmp
+*.temp
