@@ -28,6 +28,7 @@ import {
   ChangePasswordPage,
 } from "../features/account";
 import { ErrorPage } from "../components/FeedbackStates";
+import DebugPage from "../pages/DebugPage";
 
 const router = createBrowserRouter([
   {
@@ -58,6 +59,7 @@ const router = createBrowserRouter([
       { path: "cart", element: <CartPage /> },
       { path: "checkout", element: <CheckoutPage /> },
       { path: "order-success", element: <OrderSuccessPage /> },
+      { path: "debug", element: <DebugPage /> },
 
       /* Account Settings Pages */
       {
